@@ -26,16 +26,7 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     """Production configuration"""
     DEBUG = False
-    DATABASE_URL = os.environ.get('DATABASE_URL')
-    
-    if not DATABASE_URL:
-        raise ValueError("DATABASE_URL environment variable is required in production")
-    
-    # Fix for Railway: convert postgres:// to postgresql://
-    if DATABASE_URL.startswith('postgres://'):
-        DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://', 1)
-    
-    SQLALCHEMY_DATABASE_URI = DATABASE_URL
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
 
 class TestingConfig(Config):
@@ -54,4 +45,15 @@ config = {
 
 def get_config():
     env = os.environ.get('FLASK_ENV', 'development')
-    return config.get(env, config['default'])
+    selected_config = config.get(env, config['default'])
+
+    if selected_config is ProductionConfig:
+        database_url = os.environ.get('DATABASE_URL')
+        if not database_url:
+            raise ValueError("DATABASE_URL environment variable is required in production")
+        # Fix for Railway: convert postgres:// to postgresql://
+        if database_url.startswith('postgres://'):
+            database_url = database_url.replace('postgres://', 'postgresql://', 1)
+        ProductionConfig.SQLALCHEMY_DATABASE_URI = database_url
+
+    return selected_config
