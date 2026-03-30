@@ -1,0 +1,149 @@
+/* Homepage-specific styles */
+
+/* Background image and overlay */
+.home-background {
+    background-image: url('/static/images/home_page_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.background-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Home page text styling */
+.home-title {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+.home-subtitle {
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.home-divider {
+    border-color: rgba(255, 255, 255, 0.3);
+    margin: 2rem 0;
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+/* Animation keyframes */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.animation-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.stats {
+    font-size: 1.2em;
+    animation: fadeIn 1s;
+    margin-bottom: 20px;
+}
+
+.home-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.home-buttons button, .home-buttons a {
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.home-buttons button:hover, .home-buttons a:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.stats-cards {
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-out 0.9s both;
+}
+.stat-card {
+    min-width: 180px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.2s;
+    background: #fff;
+}
+.stat-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+.stat-card i {
+    color: #007bff;
+}
+.stat-card .card-title {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.stat-card .card-text {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .home-title {
+        font-size: 1.8rem;
+    }
+    
+    .home-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .stat-card {
+        min-width: 150px;
+    }
+    
+    .stat-card .card-text {
+        font-size: 1.5rem;
+    }
+}

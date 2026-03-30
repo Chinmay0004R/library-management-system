@@ -1,0 +1,294 @@
+/* Users section specific styles */
+
+body.users-background {
+    background-image: url('/static/images/users_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body.users-background .container {
+    background: transparent !important;
+}
+
+/* Users page specific styles */
+.users-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.user-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.user-card .card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    border: none;
+    padding: 20px;
+}
+
+.user-card .card-body {
+    padding: 25px;
+    background: white;
+}
+
+.user-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.user-stat {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-stat h3 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.user-stat p {
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+}
+
+.user-role-badge {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-role-badge.admin {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #8b4513;
+}
+
+.user-role-badge.student {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #2c5aa0;
+}
+
+.user-role-badge.staff {
+    background: linear-gradient(135deg, #a8caba 0%, #5d4e75 100%);
+    color: white;
+}
+
+.user-role-badge.user {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #8b0000;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.user-actions .btn {
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.user-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* User form styles */
+.user-form {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    margin: 20px 0;
+}
+
+.user-form .form-control {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.user-form .form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.user-form .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.user-form .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.user-form .btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.user-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.user-form .btn-danger {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    color: #8b0000;
+    transition: all 0.3s ease;
+}
+
+.user-form .btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 154, 158, 0.4);
+    color: #8b0000;
+}
+
+/* User registration styles */
+.registration-form {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    padding: 30px;
+    margin: 20px 0;
+    color: white;
+}
+
+.registration-form h3 {
+    color: white;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.registration-form .form-control {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.registration-form .form-control:focus {
+    border-color: #ffecd2;
+    box-shadow: 0 0 0 0.2rem rgba(255, 236, 210, 0.25);
+    background: white;
+}
+
+.registration-form .form-select {
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+.registration-form .form-select:focus {
+    border-color: #ffecd2;
+    box-shadow: 0 0 0 0.2rem rgba(255, 236, 210, 0.25);
+    background: white;
+}
+
+.registration-form .btn-primary {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 30px;
+    font-weight: 600;
+    color: #8b4513;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.registration-form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 236, 210, 0.4);
+    color: #8b4513;
+}
+
+/* User status indicators */
+.user-status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.user-status.active {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #2c5aa0;
+}
+
+.user-status.inactive {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #8b0000;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .user-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-actions {
+        flex-direction: column;
+    }
+    
+    .user-actions .btn {
+        width: 100%;
+    }
+    
+    .user-form,
+    .registration-form {
+        padding: 20px;
+    }
+} 

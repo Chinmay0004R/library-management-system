@@ -1,0 +1,220 @@
+/* Main UI Styles for All Users */
+body {
+    background: linear-gradient(rgba(30, 30, 30, 0.5), rgba(30, 30, 30, 0.5)), url('/static/images/all.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #222;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 24px;
+}
+
+.card, .table, .form-control, .btn {
+    border-radius: 10px;
+}
+
+.card {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: none;
+    margin-bottom: 24px;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+.card:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.13);
+    transform: translateY(-2px) scale(1.01);
+}
+
+.table {
+    background: #fff;
+    margin-bottom: 0;
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+.table-hover tbody tr:hover {
+    background-color: #e3f2fd;
+    transition: background 0.2s;
+}
+
+.btn {
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.btn-primary:hover, .btn-success:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-secondary:hover {
+    filter: brightness(1.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.btn:active {
+    transform: scale(0.97);
+}
+
+.form-control:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 2px #1976d233;
+}
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    background: #212529;
+}
+.navbar .nav-link, .navbar .navbar-brand {
+    color: #fff !important;
+    transition: color 0.18s;
+}
+.navbar .nav-link:hover, .navbar .navbar-brand:hover {
+    color: #90caf9 !important;
+}
+.navbar .dropdown-menu {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 600;
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .card {
+        margin-bottom: 16px;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Custom hover for nav buttons */
+.btn-nav {
+    background: transparent;
+    color: #1976d2;
+    border: none;
+    font-weight: 500;
+    transition: color 0.18s;
+}
+.btn-nav:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Highlight active nav item */
+.navbar .nav-link.active {
+    color: #90caf9 !important;
+    font-weight: 600;
+}
+
+/* Subtle fade-in for cards */
+.card, .table {
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+} 
+
+/* Glassmorphism Card Effect */
+.card, .table, .form-control {
+    background: rgba(255, 255, 255, 0.18) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+/* Remove card and table hover effect */
+.card:hover, .table:hover {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    transform: none;
+}
+
+/* Navbar Glassmorphism */
+.navbar {
+    background: rgba(33, 37, 41, 0.7) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+
+/* Vibrant Button Hover Effects */
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-secondary {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.btn-primary:hover, .btn-success:hover, .btn-info:hover, .btn-warning:hover, .btn-danger:hover, .btn-secondary:hover {
+    filter: brightness(1.12) saturate(1.2);
+    box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.18);
+    transform: scale(1.04);
+}
+
+/* Make sure text is readable on glass cards */
+.card, .table, .form-control {
+    color: #222;
+    font-weight: 500;
+}
+
+/* For headings on glass backgrounds */
+h1, h2, h3, h4, h5 {
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* Table header glass effect */
+.table thead {
+    background: rgba(255,255,255,0.32) !important;
+    color: #222;
+    font-weight: 600;
+    border-radius: 12px;
+} 
+
+/* Stat Card Style: solid, more readable white background, shadow, rounded corners */
+.stat-card {
+    background: #fff !important;
+    color: #111 !important;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    padding: 2rem 1.5rem;
+    margin: 0.5rem 1rem 1.5rem 0;
+    min-width: 140px;
+    max-width: 180px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    border: 2.5px solid #bbb;
+}
+.stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.3rem;
+    letter-spacing: 1px;
+    color: #111;
+}
+.stat-card .stat-label {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #222;
+    opacity: 1;
+}
+
+/* Remove glass effect from stat cards if previously applied */
+.stat-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1.5px solid #f3f3f3;
+} 

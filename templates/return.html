@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Return Book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+{% include 'navbar.html' %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-lg-8 col-xl-7">
+        <div class="card p-4 shadow-lg bg-white bg-opacity-90">
+                <h2 class="mb-4"><i class="fa-solid fa-rotate-left me-2 text-primary"></i>Return Book</h2>
+                <form method="post">
+                    <div class="mb-3 position-relative">
+                        <label for="member_search" class="form-label">Search Member</label>
+                        <input type="text" id="member_search" class="form-control mb-2" placeholder="Type name or ID..." autocomplete="off">
+                        <div id="member_suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></div>
+                        <label for="member_select" class="form-label">Member</label>
+                        <select class="form-select" id="member_select" name="member_id" required onchange="updateBooks()">
+                            {% for member in members %}
+                            <option value="{{ member.member_id }}">{{ member.name }} ({{ member.member_id }})</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="book_id" class="form-label">Book</label>
+                        <select class="form-select" id="book_id" name="book_id" required>
+                            <!-- Options will be populated by JS -->
+                        </select>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-undo me-1"></i>Return</button>
+                        <a href="{{ url_for('books') }}" class="btn btn-secondary btn-lg"><i class="fa fa-arrow-left me-1"></i>Back to Books</a>
+                        <a href="{{ url_for('home') }}" class="btn btn-secondary btn-lg"><i class="fa fa-home me-1"></i>Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+const memberBooks = {{ member_books|tojson }};
+function updateBooks() {
+    const memberId = document.getElementById('member_select').value;
+    const bookSelect = document.getElementById('book_id');
+    bookSelect.innerHTML = '';
+    if (memberBooks[memberId]) {
+        memberBooks[memberId].forEach(function(book) {
+            const opt = document.createElement('option');
+            opt.value = book.book_id;
+            opt.textContent = `${book.title} (${book.book_id})`;
+            bookSelect.appendChild(opt);
+        });
+    }
+}
+document.addEventListener('DOMContentLoaded', updateBooks);
+// Autocomplete dropdown for member search
+const memberSearch = document.getElementById('member_search');
+const memberSelect = document.getElementById('member_select');
+const memberSuggestions = document.getElementById('member_suggestions');
+var memberOptions = [];
+for (var i = 0; i < memberSelect.options.length; i++) {
+    var obj = {};
+    obj.value = memberSelect.options[i].value;
+    obj.text = memberSelect.options[i].text;
+    memberOptions.push(obj);
+}
+memberSearch.addEventListener('input', function() {
+    const filter = this.value.toLowerCase();
+    memberSuggestions.innerHTML = '';
+    if (filter.length === 0) {
+        memberSuggestions.style.display = 'none';
+        return;
+    }
+    const matches = memberOptions.filter(function(opt) { return opt.text.toLowerCase().includes(filter); });
+    matches.forEach(function(opt) {
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.className = 'list-group-item list-group-item-action';
+        item.textContent = opt.text;
+        item.onclick = function() {
+            memberSelect.value = opt.value;
+            memberSearch.value = opt.text;
+            memberSuggestions.innerHTML = '';
+            memberSuggestions.style.display = 'none';
+            updateBooks();
+        };
+        memberSuggestions.appendChild(item);
+    });
+    memberSuggestions.style.display = matches.length ? 'block' : 'none';
+});
+document.addEventListener('click', function(e) {
+    if (!memberSearch.contains(e.target) && !memberSuggestions.contains(e.target)) {
+        memberSuggestions.innerHTML = '';
+        memberSuggestions.style.display = 'none';
+    }
+});
+</script>
+</body>
+</html> 

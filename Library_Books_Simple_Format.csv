@@ -1,0 +1,501 @@
+book_id,title,author,isbn,category,copies
+1,The Hobbit,Stephen Hawking,929-9187,Dystopian,24
+2,The Theory of Everything,J.R.R. Tolkien,802-6082,Philosophy,39
+3,The Hobbit,J.D. Salinger,612-3255,History,54
+4,The Theory of Everything,Dan Brown,561-3915,Philosophy,87
+5,The Theory of Everything,Yuval Noah Harari,425-8186,Science,66
+6,The Great Gatsby,George Orwell,834-1192,Biography,30
+7,The Alchemist,J.D. Salinger,838-3308,Biography,43
+8,The Great Gatsby,J.R.R. Tolkien,309-1639,Romance,88
+9,Harry Potter,Stephen Hawking,270-8422,Dystopian,66
+10,The Hobbit,J.R.R. Tolkien,418-2346,Science,49
+11,The Da Vinci Code,George Orwell,538-3053,Philosophy,53
+12,The Hobbit,J.D. Salinger,441-5658,Classic,61
+13,Harry Potter,J.D. Salinger,421-5338,Dystopian,49
+14,To Kill a Mockingbird,Harper Lee,638-9657,Fantasy,11
+15,To Kill a Mockingbird,Yuval Noah Harari,644-3851,Fiction,53
+16,The Alchemist,Yuval Noah Harari,416-7090,Classic,48
+17,To Kill a Mockingbird,Stephen Hawking,495-5180,Thriller,24
+18,The Great Gatsby,J.R.R. Tolkien,372-3972,Philosophy,51
+19,The Theory of Everything,Dan Brown,845-3879,Biography,21
+20,The Great Gatsby,F. Scott Fitzgerald,405-8027,Fiction,10
+21,The Da Vinci Code,J.K. Rowling,117-7600,Thriller,64
+22,1984,Yuval Noah Harari,712-9382,Biography,96
+23,The Theory of Everything,Paulo Coelho,632-4904,Classic,77
+24,The Catcher in the Rye,J.R.R. Tolkien,273-8644,Philosophy,84
+25,The Da Vinci Code,George Orwell,446-5517,Fiction,79
+26,The Da Vinci Code,Dan Brown,372-9682,Science,19
+27,The Da Vinci Code,Paulo Coelho,708-2513,Thriller,18
+28,The Alchemist,Dan Brown,525-1040,Dystopian,69
+29,Harry Potter,Yuval Noah Harari,592-9299,History,42
+30,The Great Gatsby,Yuval Noah Harari,553-2036,Romance,42
+31,1984,J.D. Salinger,650-6400,Fiction,51
+32,Sapiens,Stephen Hawking,633-2792,Romance,49
+33,The Great Gatsby,Stephen Hawking,166-1983,Philosophy,53
+34,The Theory of Everything,F. Scott Fitzgerald,399-9515,Dystopian,62
+35,The Great Gatsby,George Orwell,681-9290,Biography,34
+36,Sapiens,Paulo Coelho,841-8288,Science,40
+37,1984,Stephen Hawking,117-3104,Dystopian,23
+38,The Da Vinci Code,J.D. Salinger,178-1444,Philosophy,28
+39,The Hobbit,J.D. Salinger,183-5076,Romance,60
+40,The Hobbit,Dan Brown,521-2536,Classic,73
+41,1984,Harper Lee,654-8998,Classic,85
+42,Sapiens,Stephen Hawking,431-4106,Classic,74
+43,The Da Vinci Code,J.K. Rowling,683-3500,Dystopian,79
+44,The Catcher in the Rye,Stephen Hawking,819-9125,Fantasy,19
+45,The Da Vinci Code,J.D. Salinger,618-5905,Dystopian,33
+46,Sapiens,Yuval Noah Harari,184-8749,Biography,87
+47,The Great Gatsby,Harper Lee,417-9822,Biography,68
+48,The Alchemist,F. Scott Fitzgerald,881-9702,Classic,79
+49,The Great Gatsby,J.K. Rowling,857-7923,Fantasy,82
+50,The Catcher in the Rye,Harper Lee,435-7384,Dystopian,79
+51,The Da Vinci Code,J.K. Rowling,467-1046,History,89
+52,Harry Potter,Paulo Coelho,868-2423,Fantasy,75
+53,The Great Gatsby,Yuval Noah Harari,939-7553,Fiction,67
+54,The Alchemist,F. Scott Fitzgerald,622-3959,Romance,24
+55,The Da Vinci Code,J.D. Salinger,257-3244,Romance,35
+56,The Hobbit,J.K. Rowling,328-7260,Fiction,13
+57,The Alchemist,J.K. Rowling,719-1342,Science,19
+58,Sapiens,Paulo Coelho,746-9189,History,96
+59,Harry Potter,F. Scott Fitzgerald,353-4650,Science,49
+60,The Theory of Everything,Yuval Noah Harari,833-6498,Romance,91
+61,The Da Vinci Code,Yuval Noah Harari,158-7790,Biography,72
+62,The Da Vinci Code,Stephen Hawking,793-2717,Philosophy,63
+63,Harry Potter,J.D. Salinger,518-8323,Romance,11
+64,Harry Potter,Yuval Noah Harari,540-2043,Classic,16
+65,To Kill a Mockingbird,J.R.R. Tolkien,142-2817,Dystopian,38
+66,The Theory of Everything,J.K. Rowling,345-8354,Philosophy,88
+67,To Kill a Mockingbird,Harper Lee,132-5020,History,76
+68,The Theory of Everything,J.K. Rowling,313-3159,Fiction,62
+69,1984,Paulo Coelho,394-6048,Romance,24
+70,The Great Gatsby,Harper Lee,479-1795,Dystopian,73
+71,The Catcher in the Rye,Dan Brown,296-6582,Fiction,85
+72,The Theory of Everything,Yuval Noah Harari,671-9200,Biography,99
+73,The Hobbit,Dan Brown,359-1782,Dystopian,24
+74,1984,Yuval Noah Harari,890-6521,History,14
+75,To Kill a Mockingbird,F. Scott Fitzgerald,247-8842,Biography,59
+76,Sapiens,Yuval Noah Harari,500-9651,Dystopian,80
+77,The Great Gatsby,J.K. Rowling,172-1133,Fiction,77
+78,Harry Potter,F. Scott Fitzgerald,848-7518,Dystopian,89
+79,Sapiens,Paulo Coelho,562-5951,Classic,97
+80,The Hobbit,Dan Brown,920-7055,Fiction,93
+81,The Da Vinci Code,Yuval Noah Harari,970-7378,History,53
+82,The Da Vinci Code,Dan Brown,144-6978,Biography,28
+83,The Great Gatsby,George Orwell,368-1963,Biography,47
+84,The Da Vinci Code,Dan Brown,184-5895,Fantasy,37
+85,The Hobbit,Yuval Noah Harari,184-6202,History,47
+86,The Alchemist,George Orwell,365-7484,Thriller,47
+87,The Da Vinci Code,J.R.R. Tolkien,320-9406,Thriller,87
+88,1984,F. Scott Fitzgerald,902-8549,Dystopian,80
+89,Harry Potter,George Orwell,575-8853,Science,50
+90,To Kill a Mockingbird,Yuval Noah Harari,917-8458,Philosophy,99
+91,The Da Vinci Code,Paulo Coelho,647-4995,Thriller,89
+92,The Da Vinci Code,F. Scott Fitzgerald,855-4046,Biography,73
+93,Sapiens,J.K. Rowling,948-4488,Classic,85
+94,The Da Vinci Code,Yuval Noah Harari,696-7966,Biography,51
+95,1984,Stephen Hawking,435-6690,Biography,59
+96,Harry Potter,F. Scott Fitzgerald,914-1104,Romance,96
+97,The Theory of Everything,Stephen Hawking,231-4148,Science,98
+98,Harry Potter,George Orwell,227-3883,Science,61
+99,The Da Vinci Code,George Orwell,106-2581,Fiction,91
+100,The Great Gatsby,J.K. Rowling,141-5615,Science,94
+101,To Kill a Mockingbird,Yuval Noah Harari,267-4734,Romance,56
+102,1984,Dan Brown,870-6734,Biography,39
+103,1984,Paulo Coelho,501-5593,Thriller,21
+104,Sapiens,J.K. Rowling,172-4184,Classic,87
+105,Harry Potter,Yuval Noah Harari,827-8353,History,14
+106,Harry Potter,J.D. Salinger,583-3995,Fantasy,43
+107,The Hobbit,F. Scott Fitzgerald,672-9633,Fantasy,95
+108,The Catcher in the Rye,Harper Lee,625-8887,Philosophy,52
+109,Harry Potter,J.R.R. Tolkien,156-5075,History,52
+110,The Hobbit,Yuval Noah Harari,677-3306,Philosophy,33
+111,The Hobbit,George Orwell,542-5301,Biography,71
+112,1984,Yuval Noah Harari,987-8394,Classic,38
+113,The Catcher in the Rye,Harper Lee,469-5398,Fantasy,43
+114,1984,Paulo Coelho,255-1837,Classic,25
+115,To Kill a Mockingbird,J.K. Rowling,952-1445,Biography,16
+116,The Catcher in the Rye,J.K. Rowling,479-1339,Biography,89
+117,The Theory of Everything,Paulo Coelho,796-5720,Science,51
+118,The Theory of Everything,Dan Brown,423-4294,Fiction,10
+119,To Kill a Mockingbird,F. Scott Fitzgerald,929-8818,Fantasy,62
+120,The Da Vinci Code,Yuval Noah Harari,174-1063,Biography,100
+121,Sapiens,Harper Lee,469-4811,Classic,76
+122,1984,J.R.R. Tolkien,831-3495,Classic,58
+123,The Theory of Everything,Harper Lee,158-7554,Biography,10
+124,1984,Harper Lee,240-6478,Romance,96
+125,The Great Gatsby,J.D. Salinger,863-5649,History,42
+126,The Theory of Everything,Yuval Noah Harari,745-1139,Romance,60
+127,The Alchemist,Paulo Coelho,838-9578,Fantasy,81
+128,1984,J.R.R. Tolkien,293-6810,Dystopian,72
+129,Sapiens,Dan Brown,623-5443,Dystopian,65
+130,The Hobbit,George Orwell,455-9218,Classic,50
+131,The Hobbit,George Orwell,674-1096,Philosophy,64
+132,The Alchemist,J.R.R. Tolkien,908-5018,Thriller,29
+133,The Da Vinci Code,J.R.R. Tolkien,816-6994,Philosophy,55
+134,The Great Gatsby,Yuval Noah Harari,449-4570,Science,43
+135,Sapiens,Yuval Noah Harari,256-6355,Thriller,90
+136,The Great Gatsby,George Orwell,673-7254,Classic,35
+137,The Hobbit,Yuval Noah Harari,480-9796,Romance,22
+138,The Hobbit,Stephen Hawking,651-1815,Thriller,65
+139,To Kill a Mockingbird,Paulo Coelho,119-3227,History,22
+140,Harry Potter,F. Scott Fitzgerald,809-6276,Thriller,96
+141,The Hobbit,F. Scott Fitzgerald,423-6393,History,47
+142,The Hobbit,Dan Brown,994-7882,Thriller,52
+143,1984,Yuval Noah Harari,881-8535,Philosophy,93
+144,Harry Potter,Harper Lee,762-6570,Romance,78
+145,The Alchemist,Stephen Hawking,307-3911,Classic,28
+146,The Da Vinci Code,Paulo Coelho,815-9050,Philosophy,36
+147,The Catcher in the Rye,Stephen Hawking,281-2965,Dystopian,85
+148,The Alchemist,George Orwell,288-7926,Fiction,27
+149,The Da Vinci Code,J.K. Rowling,929-8238,Science,27
+150,To Kill a Mockingbird,J.R.R. Tolkien,358-8244,Thriller,44
+151,The Da Vinci Code,Harper Lee,606-7465,Biography,68
+152,Sapiens,Paulo Coelho,125-1988,Fantasy,77
+153,The Catcher in the Rye,Paulo Coelho,868-2205,Philosophy,43
+154,Harry Potter,Stephen Hawking,803-9498,Biography,28
+155,1984,F. Scott Fitzgerald,641-2100,Fiction,36
+156,The Theory of Everything,Paulo Coelho,835-5780,Biography,32
+157,The Theory of Everything,Dan Brown,275-5481,Thriller,83
+158,The Hobbit,J.K. Rowling,575-1590,Romance,17
+159,The Catcher in the Rye,Yuval Noah Harari,112-4820,Fantasy,73
+160,Harry Potter,Stephen Hawking,915-7103,Fiction,25
+161,To Kill a Mockingbird,Dan Brown,102-9108,Science,70
+162,The Great Gatsby,Paulo Coelho,508-2796,Dystopian,45
+163,The Da Vinci Code,Dan Brown,304-7053,Classic,86
+164,The Hobbit,George Orwell,623-2685,Fantasy,26
+165,The Catcher in the Rye,F. Scott Fitzgerald,338-4177,History,43
+166,To Kill a Mockingbird,J.K. Rowling,854-2970,Classic,66
+167,The Theory of Everything,J.K. Rowling,492-2876,Classic,71
+168,The Theory of Everything,Paulo Coelho,953-4425,Fantasy,42
+169,Sapiens,F. Scott Fitzgerald,166-7448,Thriller,62
+170,Sapiens,Dan Brown,309-5039,Philosophy,16
+171,To Kill a Mockingbird,J.R.R. Tolkien,292-7187,Dystopian,19
+172,The Da Vinci Code,J.K. Rowling,161-6698,Romance,26
+173,1984,George Orwell,110-4593,Fantasy,90
+174,To Kill a Mockingbird,J.R.R. Tolkien,481-4839,Philosophy,46
+175,The Catcher in the Rye,F. Scott Fitzgerald,420-6776,Fiction,67
+176,Sapiens,Dan Brown,289-9005,Science,49
+177,The Hobbit,Yuval Noah Harari,566-7784,Classic,36
+178,The Da Vinci Code,F. Scott Fitzgerald,737-4829,Biography,85
+179,The Theory of Everything,J.D. Salinger,952-7250,Romance,53
+180,The Catcher in the Rye,F. Scott Fitzgerald,538-1251,Thriller,19
+181,The Alchemist,Stephen Hawking,889-2446,Philosophy,69
+182,The Da Vinci Code,Paulo Coelho,184-9476,Romance,99
+183,Harry Potter,Stephen Hawking,340-6118,Philosophy,28
+184,The Da Vinci Code,Dan Brown,932-6121,Classic,45
+185,The Da Vinci Code,Dan Brown,988-2217,Fantasy,47
+186,The Great Gatsby,J.R.R. Tolkien,672-5671,Classic,51
+187,The Theory of Everything,F. Scott Fitzgerald,489-6698,Romance,64
+188,The Catcher in the Rye,Stephen Hawking,666-1820,Fiction,58
+189,The Da Vinci Code,Dan Brown,599-9988,Dystopian,38
+190,Sapiens,Paulo Coelho,711-4920,Thriller,71
+191,The Great Gatsby,Harper Lee,327-1848,Fantasy,57
+192,The Great Gatsby,Yuval Noah Harari,999-9000,Science,93
+193,The Theory of Everything,Paulo Coelho,141-2214,History,55
+194,The Hobbit,Harper Lee,669-2660,Biography,40
+195,The Hobbit,Yuval Noah Harari,346-4074,Romance,74
+196,The Catcher in the Rye,J.K. Rowling,226-5821,History,79
+197,The Da Vinci Code,J.K. Rowling,974-8789,Fiction,89
+198,The Alchemist,Stephen Hawking,599-3889,Classic,87
+199,The Hobbit,Paulo Coelho,340-3046,Romance,92
+200,The Hobbit,Harper Lee,915-3314,Biography,82
+201,The Catcher in the Rye,J.R.R. Tolkien,417-3507,Dystopian,88
+202,The Alchemist,George Orwell,115-4883,History,31
+203,1984,J.D. Salinger,890-5056,Fiction,84
+204,The Theory of Everything,Dan Brown,383-7820,Thriller,60
+205,1984,Yuval Noah Harari,850-4838,Romance,44
+206,Sapiens,Stephen Hawking,110-7906,Science,47
+207,The Great Gatsby,George Orwell,636-5627,Dystopian,22
+208,The Alchemist,George Orwell,205-9650,History,80
+209,1984,Dan Brown,225-7731,Fantasy,59
+210,The Alchemist,Dan Brown,416-9986,Dystopian,22
+211,The Da Vinci Code,F. Scott Fitzgerald,382-1659,Fiction,15
+212,Harry Potter,F. Scott Fitzgerald,824-1199,Fantasy,76
+213,The Hobbit,Yuval Noah Harari,209-7180,Classic,42
+214,Harry Potter,Harper Lee,204-6213,Fantasy,99
+215,To Kill a Mockingbird,George Orwell,202-7795,Romance,73
+216,The Da Vinci Code,Dan Brown,948-9727,History,65
+217,The Da Vinci Code,Stephen Hawking,581-9484,Biography,56
+218,To Kill a Mockingbird,Harper Lee,797-6817,Fiction,81
+219,The Da Vinci Code,F. Scott Fitzgerald,232-3043,Science,94
+220,Harry Potter,J.R.R. Tolkien,582-4907,Fiction,98
+221,The Great Gatsby,F. Scott Fitzgerald,429-8893,Fiction,77
+222,1984,J.R.R. Tolkien,602-8534,Biography,34
+223,The Alchemist,Yuval Noah Harari,753-1737,Biography,13
+224,The Great Gatsby,J.D. Salinger,621-8803,Classic,80
+225,The Alchemist,Yuval Noah Harari,530-8398,Biography,24
+226,Sapiens,Dan Brown,884-5295,Philosophy,74
+227,The Hobbit,J.K. Rowling,709-8795,Romance,98
+228,To Kill a Mockingbird,Dan Brown,137-6201,Philosophy,35
+229,The Alchemist,Harper Lee,507-5761,Romance,31
+230,To Kill a Mockingbird,Stephen Hawking,726-5992,Philosophy,29
+231,The Great Gatsby,J.R.R. Tolkien,472-2417,Dystopian,81
+232,The Alchemist,George Orwell,427-6079,Dystopian,46
+233,The Hobbit,Dan Brown,425-2866,Philosophy,83
+234,The Da Vinci Code,J.K. Rowling,825-4274,Romance,55
+235,Sapiens,Yuval Noah Harari,317-6548,Thriller,10
+236,The Hobbit,Dan Brown,851-3090,Dystopian,90
+237,The Catcher in the Rye,Yuval Noah Harari,423-8157,Biography,75
+238,The Da Vinci Code,J.K. Rowling,875-7607,Romance,54
+239,To Kill a Mockingbird,Stephen Hawking,550-4996,Classic,100
+240,The Theory of Everything,J.R.R. Tolkien,201-6144,Fiction,40
+241,To Kill a Mockingbird,George Orwell,896-8782,Dystopian,93
+242,1984,Yuval Noah Harari,926-4281,Fantasy,34
+243,The Hobbit,J.K. Rowling,430-1916,Fiction,41
+244,The Alchemist,George Orwell,756-3082,Biography,27
+245,The Da Vinci Code,J.D. Salinger,364-6252,Dystopian,78
+246,The Da Vinci Code,Paulo Coelho,740-6156,Biography,29
+247,The Theory of Everything,Stephen Hawking,244-2813,Biography,70
+248,To Kill a Mockingbird,George Orwell,571-2364,Dystopian,56
+249,The Da Vinci Code,Stephen Hawking,881-5664,History,57
+250,The Alchemist,Yuval Noah Harari,457-9224,Science,63
+251,The Hobbit,J.K. Rowling,115-3006,Romance,58
+252,The Da Vinci Code,George Orwell,653-1705,History,29
+253,The Theory of Everything,Stephen Hawking,387-6574,Romance,62
+254,1984,George Orwell,411-4555,History,71
+255,The Catcher in the Rye,Harper Lee,541-4715,History,25
+256,1984,J.R.R. Tolkien,779-3068,Classic,90
+257,1984,Dan Brown,416-6856,Science,70
+258,Harry Potter,J.D. Salinger,847-8286,Science,45
+259,Sapiens,J.K. Rowling,646-3429,Science,35
+260,The Great Gatsby,George Orwell,915-9948,Thriller,29
+261,The Hobbit,Yuval Noah Harari,351-6289,Biography,67
+262,The Da Vinci Code,J.D. Salinger,650-1184,Fiction,69
+263,The Theory of Everything,F. Scott Fitzgerald,939-9311,Biography,73
+264,The Great Gatsby,J.D. Salinger,620-4709,Fantasy,47
+265,The Da Vinci Code,Yuval Noah Harari,694-7928,Philosophy,77
+266,The Catcher in the Rye,Yuval Noah Harari,845-4474,Philosophy,83
+267,1984,J.K. Rowling,591-3505,Fiction,36
+268,To Kill a Mockingbird,Paulo Coelho,669-9041,Thriller,15
+269,The Catcher in the Rye,Stephen Hawking,196-1339,Dystopian,68
+270,The Hobbit,Harper Lee,915-3331,Philosophy,76
+271,The Catcher in the Rye,George Orwell,353-4445,Philosophy,15
+272,The Da Vinci Code,F. Scott Fitzgerald,576-7612,Romance,85
+273,The Da Vinci Code,J.K. Rowling,705-2411,History,13
+274,The Theory of Everything,Harper Lee,114-6955,History,24
+275,1984,Paulo Coelho,690-5069,History,18
+276,1984,Dan Brown,991-9008,Philosophy,43
+277,The Great Gatsby,Dan Brown,213-9569,Fantasy,34
+278,The Great Gatsby,Dan Brown,882-4188,Dystopian,31
+279,To Kill a Mockingbird,J.D. Salinger,930-1853,Philosophy,91
+280,The Hobbit,J.D. Salinger,535-4583,History,67
+281,The Hobbit,J.R.R. Tolkien,920-8434,Dystopian,28
+282,The Alchemist,George Orwell,370-3689,Romance,77
+283,The Alchemist,Dan Brown,607-4397,Fiction,45
+284,Sapiens,J.K. Rowling,928-5139,Thriller,91
+285,The Catcher in the Rye,Dan Brown,529-9436,Fiction,94
+286,The Alchemist,George Orwell,828-5341,Biography,51
+287,The Catcher in the Rye,Dan Brown,640-7365,Thriller,37
+288,1984,George Orwell,348-2510,Classic,49
+289,The Great Gatsby,F. Scott Fitzgerald,416-8301,Science,53
+290,To Kill a Mockingbird,J.D. Salinger,808-9894,Fantasy,12
+291,The Great Gatsby,J.D. Salinger,161-9013,Biography,96
+292,The Great Gatsby,Yuval Noah Harari,148-2980,Philosophy,86
+293,1984,J.D. Salinger,432-8299,Fiction,61
+294,The Catcher in the Rye,Paulo Coelho,160-6228,Biography,89
+295,The Da Vinci Code,J.K. Rowling,818-3649,Romance,45
+296,The Da Vinci Code,Dan Brown,988-4203,Fantasy,98
+297,1984,F. Scott Fitzgerald,548-2013,Thriller,62
+298,The Hobbit,F. Scott Fitzgerald,711-8436,Science,61
+299,The Theory of Everything,Harper Lee,436-8864,Philosophy,68
+300,Harry Potter,Dan Brown,433-6549,Classic,97
+301,1984,Paulo Coelho,372-8205,Science,12
+302,The Da Vinci Code,Stephen Hawking,737-7437,Fantasy,92
+303,1984,F. Scott Fitzgerald,929-6219,History,91
+304,1984,Paulo Coelho,299-2181,Thriller,14
+305,To Kill a Mockingbird,Stephen Hawking,737-1743,History,55
+306,The Alchemist,George Orwell,565-4055,Biography,23
+307,The Theory of Everything,Stephen Hawking,765-7683,Science,98
+308,Sapiens,Paulo Coelho,843-1994,Fantasy,29
+309,The Great Gatsby,Harper Lee,259-9325,History,85
+310,The Great Gatsby,Stephen Hawking,372-5809,Biography,52
+311,The Da Vinci Code,F. Scott Fitzgerald,199-2542,Dystopian,61
+312,The Alchemist,Harper Lee,309-4803,Classic,51
+313,The Catcher in the Rye,Paulo Coelho,484-7845,Classic,70
+314,The Hobbit,Stephen Hawking,757-2329,Romance,71
+315,The Alchemist,F. Scott Fitzgerald,500-8856,Fantasy,58
+316,The Great Gatsby,Yuval Noah Harari,644-1950,Romance,55
+317,Sapiens,Harper Lee,196-9209,Fiction,23
+318,The Great Gatsby,Dan Brown,345-3308,Fiction,64
+319,The Theory of Everything,J.K. Rowling,995-3948,Biography,90
+320,Sapiens,Dan Brown,409-9701,Fiction,92
+321,The Catcher in the Rye,F. Scott Fitzgerald,409-4743,Dystopian,48
+322,Sapiens,Dan Brown,325-5121,Philosophy,77
+323,1984,Paulo Coelho,105-6082,Romance,50
+324,To Kill a Mockingbird,Stephen Hawking,251-7104,Romance,41
+325,Harry Potter,J.R.R. Tolkien,600-2169,Fantasy,74
+326,Harry Potter,J.D. Salinger,787-3614,Fiction,78
+327,The Catcher in the Rye,Paulo Coelho,443-9447,Dystopian,60
+328,Harry Potter,J.K. Rowling,757-4697,Romance,57
+329,1984,George Orwell,874-9676,Dystopian,78
+330,The Great Gatsby,F. Scott Fitzgerald,128-5367,Classic,49
+331,The Catcher in the Rye,J.K. Rowling,978-6488,Biography,28
+332,Harry Potter,George Orwell,283-4189,Romance,43
+333,The Catcher in the Rye,J.K. Rowling,640-5185,Fantasy,56
+334,1984,George Orwell,934-7727,Fantasy,53
+335,The Theory of Everything,J.K. Rowling,549-5739,Dystopian,94
+336,The Alchemist,J.K. Rowling,355-7375,Fiction,29
+337,Sapiens,J.K. Rowling,545-9955,Thriller,61
+338,The Great Gatsby,Harper Lee,483-8906,History,74
+339,To Kill a Mockingbird,Harper Lee,319-5400,Thriller,60
+340,To Kill a Mockingbird,Stephen Hawking,851-2460,Dystopian,88
+341,The Catcher in the Rye,Dan Brown,823-3609,Fantasy,76
+342,The Great Gatsby,Dan Brown,510-5259,Science,91
+343,The Catcher in the Rye,Paulo Coelho,869-4369,Dystopian,64
+344,Harry Potter,J.D. Salinger,246-6625,Philosophy,85
+345,Harry Potter,J.R.R. Tolkien,411-1374,Dystopian,88
+346,To Kill a Mockingbird,Dan Brown,966-7098,Biography,25
+347,The Hobbit,J.R.R. Tolkien,752-5725,Romance,45
+348,The Theory of Everything,Harper Lee,779-9945,Fiction,58
+349,1984,Dan Brown,529-2893,Fiction,98
+350,The Theory of Everything,J.R.R. Tolkien,375-9175,Classic,51
+351,Sapiens,F. Scott Fitzgerald,896-2904,Thriller,15
+352,1984,J.R.R. Tolkien,267-3481,Philosophy,98
+353,The Hobbit,Paulo Coelho,948-7543,Philosophy,96
+354,The Alchemist,George Orwell,457-9162,History,78
+355,To Kill a Mockingbird,J.K. Rowling,617-6309,Science,42
+356,Sapiens,Yuval Noah Harari,564-1084,Philosophy,70
+357,The Theory of Everything,F. Scott Fitzgerald,818-1882,History,74
+358,The Da Vinci Code,Stephen Hawking,377-3725,Romance,27
+359,The Catcher in the Rye,F. Scott Fitzgerald,904-6227,Romance,13
+360,The Great Gatsby,Dan Brown,801-7870,Fiction,33
+361,The Great Gatsby,Paulo Coelho,370-1403,Philosophy,46
+362,The Alchemist,Stephen Hawking,329-7010,Biography,57
+363,To Kill a Mockingbird,J.R.R. Tolkien,737-1709,History,92
+364,To Kill a Mockingbird,J.K. Rowling,525-8867,Philosophy,30
+365,The Da Vinci Code,Paulo Coelho,871-3854,Philosophy,61
+366,Sapiens,J.D. Salinger,574-4802,Romance,93
+367,The Catcher in the Rye,J.D. Salinger,990-4971,Thriller,76
+368,To Kill a Mockingbird,J.R.R. Tolkien,691-3130,History,71
+369,The Great Gatsby,J.D. Salinger,547-6177,Fiction,63
+370,1984,J.R.R. Tolkien,812-7907,Science,56
+371,The Catcher in the Rye,George Orwell,982-3246,Fiction,54
+372,The Alchemist,Harper Lee,563-7646,Romance,77
+373,The Great Gatsby,Harper Lee,194-8948,Biography,27
+374,1984,J.K. Rowling,691-6299,Science,42
+375,To Kill a Mockingbird,Harper Lee,781-1533,Fiction,21
+376,The Great Gatsby,Yuval Noah Harari,288-1172,Fiction,42
+377,The Da Vinci Code,Stephen Hawking,742-4552,Fantasy,67
+378,Harry Potter,J.K. Rowling,337-1445,Romance,47
+379,To Kill a Mockingbird,Dan Brown,686-9552,Classic,11
+380,The Great Gatsby,J.D. Salinger,495-5728,Classic,74
+381,Sapiens,Yuval Noah Harari,971-9911,Fantasy,45
+382,To Kill a Mockingbird,Yuval Noah Harari,340-7658,Fantasy,67
+383,The Da Vinci Code,J.K. Rowling,874-9593,History,50
+384,To Kill a Mockingbird,Stephen Hawking,333-5724,Biography,38
+385,The Hobbit,Dan Brown,591-1769,Fiction,73
+386,Harry Potter,J.D. Salinger,528-8717,Thriller,56
+387,The Great Gatsby,Stephen Hawking,558-9111,Thriller,35
+388,The Hobbit,Paulo Coelho,904-9694,Romance,92
+389,Sapiens,Stephen Hawking,317-7480,Dystopian,21
+390,The Alchemist,Yuval Noah Harari,878-6390,Fiction,65
+391,The Alchemist,George Orwell,444-8357,Romance,91
+392,The Theory of Everything,F. Scott Fitzgerald,570-9287,History,70
+393,1984,Paulo Coelho,570-3185,Fiction,67
+394,1984,J.D. Salinger,890-8569,Philosophy,24
+395,The Da Vinci Code,Paulo Coelho,490-3152,Fantasy,36
+396,The Great Gatsby,George Orwell,210-3007,Fiction,92
+397,The Da Vinci Code,Stephen Hawking,277-5855,Thriller,40
+398,To Kill a Mockingbird,Yuval Noah Harari,216-4702,Biography,24
+399,The Catcher in the Rye,George Orwell,968-6143,Science,67
+400,1984,Paulo Coelho,502-3739,Classic,63
+401,To Kill a Mockingbird,J.K. Rowling,454-2178,Fiction,71
+402,Harry Potter,Stephen Hawking,126-2302,Biography,88
+403,Harry Potter,Harper Lee,914-7861,History,52
+404,Sapiens,Yuval Noah Harari,858-3104,Romance,56
+405,The Da Vinci Code,J.K. Rowling,630-1609,Romance,13
+406,The Catcher in the Rye,J.K. Rowling,606-6689,Thriller,27
+407,The Theory of Everything,J.K. Rowling,550-8664,Fantasy,17
+408,Sapiens,George Orwell,148-3743,Romance,62
+409,The Theory of Everything,J.R.R. Tolkien,940-3900,Biography,83
+410,1984,Yuval Noah Harari,183-8743,Philosophy,82
+411,The Hobbit,J.R.R. Tolkien,485-2447,Thriller,71
+412,Sapiens,F. Scott Fitzgerald,987-7947,History,75
+413,1984,Paulo Coelho,149-5755,Fiction,39
+414,The Great Gatsby,Yuval Noah Harari,475-3380,Science,80
+415,Sapiens,J.D. Salinger,170-2883,Biography,46
+416,Harry Potter,Paulo Coelho,879-3941,Romance,56
+417,1984,J.K. Rowling,791-6046,Dystopian,57
+418,The Great Gatsby,J.R.R. Tolkien,343-8569,Philosophy,18
+419,The Hobbit,Yuval Noah Harari,694-5216,History,26
+420,To Kill a Mockingbird,F. Scott Fitzgerald,990-1923,Dystopian,55
+421,To Kill a Mockingbird,J.K. Rowling,494-8241,Science,40
+422,The Catcher in the Rye,F. Scott Fitzgerald,448-3834,Fantasy,72
+423,The Alchemist,Dan Brown,849-1981,Fiction,14
+424,The Hobbit,Stephen Hawking,271-7681,History,73
+425,To Kill a Mockingbird,F. Scott Fitzgerald,450-9831,Philosophy,96
+426,Harry Potter,F. Scott Fitzgerald,601-6123,Biography,32
+427,Harry Potter,Dan Brown,370-2163,Fiction,41
+428,Harry Potter,George Orwell,451-5245,Classic,80
+429,1984,Harper Lee,455-2537,Dystopian,35
+430,The Da Vinci Code,Dan Brown,174-9389,Philosophy,82
+431,The Hobbit,J.D. Salinger,105-1071,Science,30
+432,To Kill a Mockingbird,George Orwell,318-5522,Fantasy,68
+433,The Catcher in the Rye,Stephen Hawking,764-5084,Biography,15
+434,The Theory of Everything,Stephen Hawking,728-5712,Dystopian,29
+435,The Da Vinci Code,J.K. Rowling,376-2197,Classic,70
+436,1984,J.R.R. Tolkien,302-3427,Biography,44
+437,The Hobbit,J.R.R. Tolkien,439-4950,Fiction,92
+438,To Kill a Mockingbird,Yuval Noah Harari,191-3551,Classic,86
+439,The Alchemist,Yuval Noah Harari,239-8124,History,98
+440,The Great Gatsby,F. Scott Fitzgerald,311-3932,Science,51
+441,1984,Dan Brown,871-3003,Classic,47
+442,The Great Gatsby,Stephen Hawking,205-3329,Dystopian,28
+443,The Catcher in the Rye,J.R.R. Tolkien,272-5093,Dystopian,81
+444,The Da Vinci Code,F. Scott Fitzgerald,384-7154,Fiction,93
+445,Sapiens,Stephen Hawking,182-6429,Fiction,70
+446,The Theory of Everything,George Orwell,459-7220,Fiction,17
+447,Harry Potter,J.D. Salinger,238-5695,Dystopian,48
+448,The Theory of Everything,Paulo Coelho,323-1555,Philosophy,15
+449,Harry Potter,George Orwell,327-3039,Fantasy,18
+450,The Catcher in the Rye,J.D. Salinger,487-7070,Romance,100
+451,1984,Harper Lee,921-1530,Thriller,29
+452,The Alchemist,George Orwell,213-6565,Thriller,34
+453,The Hobbit,Yuval Noah Harari,639-9247,Science,96
+454,The Hobbit,Paulo Coelho,679-7967,Science,53
+455,The Alchemist,F. Scott Fitzgerald,751-3386,Dystopian,93
+456,The Catcher in the Rye,Stephen Hawking,119-3540,Romance,24
+457,1984,George Orwell,349-8343,Thriller,69
+458,1984,George Orwell,861-3279,Biography,90
+459,Harry Potter,J.D. Salinger,496-2821,Biography,78
+460,To Kill a Mockingbird,Yuval Noah Harari,151-1365,History,40
+461,The Great Gatsby,J.K. Rowling,711-2050,Fantasy,41
+462,Sapiens,Paulo Coelho,572-3827,Fiction,62
+463,Harry Potter,J.D. Salinger,105-1049,Classic,46
+464,The Catcher in the Rye,Stephen Hawking,549-9362,Dystopian,83
+465,Harry Potter,George Orwell,512-8153,Fiction,21
+466,The Theory of Everything,J.D. Salinger,582-3493,Fantasy,85
+467,Harry Potter,Yuval Noah Harari,463-3074,Science,18
+468,Harry Potter,Dan Brown,807-1521,Classic,94
+469,Sapiens,F. Scott Fitzgerald,628-7122,Biography,11
+470,The Catcher in the Rye,J.K. Rowling,551-1847,Science,81
+471,Harry Potter,Paulo Coelho,286-5718,Romance,69
+472,The Theory of Everything,J.D. Salinger,101-9217,Classic,76
+473,The Alchemist,Harper Lee,160-7927,History,82
+474,The Great Gatsby,Stephen Hawking,376-5866,Thriller,13
+475,To Kill a Mockingbird,F. Scott Fitzgerald,855-6641,Romance,50
+476,The Great Gatsby,J.R.R. Tolkien,688-6892,Thriller,33
+477,The Hobbit,F. Scott Fitzgerald,940-2042,Fiction,17
+478,Harry Potter,George Orwell,161-2770,Thriller,100
+479,The Da Vinci Code,J.R.R. Tolkien,369-9149,Biography,10
+480,Harry Potter,Harper Lee,155-7664,Philosophy,92
+481,To Kill a Mockingbird,J.K. Rowling,235-4844,Fiction,30
+482,Sapiens,J.K. Rowling,157-7198,History,85
+483,The Da Vinci Code,Paulo Coelho,721-7842,Fantasy,42
+484,The Hobbit,J.R.R. Tolkien,270-6766,Thriller,31
+485,Sapiens,J.K. Rowling,207-5395,Dystopian,12
+486,Sapiens,Stephen Hawking,179-7878,Classic,43
+487,The Da Vinci Code,J.K. Rowling,772-5431,Thriller,30
+488,Harry Potter,George Orwell,283-9463,Dystopian,16
+489,To Kill a Mockingbird,F. Scott Fitzgerald,253-9718,Fantasy,88
+490,The Catcher in the Rye,Yuval Noah Harari,345-2345,Romance,49
+491,Sapiens,George Orwell,887-8655,History,87
+492,The Hobbit,J.R.R. Tolkien,495-5811,Philosophy,97
+493,The Da Vinci Code,J.R.R. Tolkien,904-2171,Fantasy,69
+494,To Kill a Mockingbird,J.K. Rowling,647-7170,Fiction,89
+495,The Alchemist,Harper Lee,559-1058,Romance,85
+496,1984,Harper Lee,238-5635,Philosophy,63
+497,To Kill a Mockingbird,Stephen Hawking,436-6649,Classic,15
+498,Sapiens,Dan Brown,823-5831,Romance,50
+499,The Catcher in the Rye,Harper Lee,310-7599,Dystopian,81
+500,The Da Vinci Code,J.R.R. Tolkien,322-9795,Biography,96

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Details for {{ day }}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h2>Attendance Details for {{ day }}</h2>
+    <a href="{{ url_for('admin_attendance_data') }}" class="btn btn-secondary mb-3">Back</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>In Time</th>
+                <th>Out Time</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for record in records %}
+            <tr>
+                <td>{{ record.visitor_id }}</td>
+                <td>{{ record.name }}</td>
+                <td>{{ record.visitor_type }}</td>
+                <td>{{ record.entry_time.strftime('%H:%M:%S') }}</td>
+                <td>
+                  {% if record.exit_time %}
+                    {{ record.exit_time.strftime('%H:%M:%S') }}
+                  {% else %}
+                    Still Present
+                  {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html> 

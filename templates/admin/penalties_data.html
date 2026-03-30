@@ -1,0 +1,861 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+<style>
+    :root {
+        --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --success-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        --danger-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+        --warning-gradient: linear-gradient(135deg, #ffd93d 0%, #ffb84d 100%);
+        --primary-color: #667eea;
+        --secondary-color: #764ba2;
+        --text-light: #e0e0e0;
+        --text-muted: #a0a0a0;
+        --bg-dark: #1a1a2e;
+        --bg-darker: #16213e;
+        --border-color: #2d3561;
+        --glass-bg: rgba(255, 255, 255, 0.08);
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+        --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.4);
+        --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.5);
+        --shadow-xl: 0 15px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: linear-gradient(rgba(20, 20, 40, 0.6), rgba(20, 20, 40, 0.6)), url('/static/images/all.jpeg') no-repeat center center fixed;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: var(--text-light);
+    }
+
+    .container-fluid {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    /* Header Styles */
+    .penalty-header {
+        background: var(--primary-gradient);
+        color: white;
+        padding: 45px 40px;
+        border-radius: 16px;
+        margin-bottom: 35px;
+        box-shadow: var(--shadow-xl);
+        position: relative;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .penalty-header::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 300px;
+        height: 300px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+    }
+
+    .penalty-header .row {
+        position: relative;
+        z-index: 2;
+    }
+
+    .penalty-header h1 {
+        font-weight: 800;
+        font-size: 36px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .penalty-header h1 i {
+        font-size: 40px;
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    }
+
+    .penalty-header p {
+        font-size: 16px;
+        opacity: 0.95;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    .penalty-header .btn-light {
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .penalty-header .btn-light:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+
+    /* Statistics Cards */
+    .penalty-stat-card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 14px;
+        box-shadow: var(--shadow-md);
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-bottom: 25px;
+        border-left: 5px solid var(--primary-color);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .penalty-stat-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.1));
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .penalty-stat-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-8px);
+        border-color: rgba(102, 126, 234, 0.3);
+    }
+
+    .penalty-stat-card:hover::after {
+        opacity: 1;
+    }
+
+    .penalty-stat-card h5 {
+        color: var(--text-muted);
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 18px;
+        letter-spacing: 1.2px;
+    }
+
+    .penalty-stat-card .stat-value {
+        font-size: 42px;
+        font-weight: 800;
+        background: var(--primary-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        line-height: 1.2;
+    }
+
+    /* Penalty Actions */
+    .penalty-actions {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .penalty-actions .btn {
+        padding: 8px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        border: none;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .penalty-actions .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Badges */
+    .penalty-badge {
+        display: inline-block;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .penalty-high {
+        background: var(--danger-gradient);
+        color: white;
+    }
+
+    .penalty-medium {
+        background: var(--warning-gradient);
+        color: #333;
+        box-shadow: 0 2px 8px rgba(255, 217, 61, 0.2);
+    }
+
+    .penalty-low {
+        background: var(--success-gradient);
+        color: white;
+    }
+
+    /* Table Wrapper */
+    .table-wrapper {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        box-shadow: var(--shadow-md);
+        overflow: hidden;
+        margin-bottom: 35px;
+        transition: all 0.3s ease;
+    }
+
+    .table-wrapper:hover {
+        box-shadow: var(--shadow-lg);
+        border-color: rgba(102, 126, 234, 0.2);
+    }
+
+    .table {
+        margin-bottom: 0;
+    }
+
+    .table thead th {
+        background: var(--primary-gradient);
+        border: none;
+        font-weight: 700;
+        color: white;
+        padding: 20px 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .table thead th:first-child {
+        border-radius: 14px 0 0 0;
+    }
+
+    .table thead th:last-child {
+        border-radius: 0 14px 0 0;
+    }
+
+    .table tbody tr {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
+    }
+
+    .table tbody tr:hover {
+        background: rgba(102, 126, 234, 0.1);
+    }
+
+    .table tbody tr:last-child {
+        border-bottom: none;
+    }
+
+    .table tbody td {
+        padding: 18px 15px;
+        vertical-align: middle;
+        color: #000000 !important;
+        font-weight: 500;
+        text-shadow: none;
+    }
+
+    /* Name column */
+    .table tbody tr td:nth-child(2) {
+        color: #000000 !important;
+        font-weight: 600 !important;
+        font-size: 15px !important;
+    }
+
+    /* Email column */
+    .table tbody tr td:nth-child(3) {
+        color: #1a1a1a !important;
+        font-weight: 500 !important;
+        font-size: 14px !important;
+    }
+
+    /* Department column */
+    .table tbody tr td:nth-child(4) {
+        color: #000000 !important;
+        font-weight: 500 !important;
+    }
+
+    .table tbody td strong {
+        font-weight: 700;
+        color: #667eea;
+    }
+
+    /* Specific column colors for better readability */
+    .table tbody tr td:nth-child(1),
+    .table tbody tr td:nth-child(2),
+    .table tbody tr td:nth-child(3),
+    .table tbody tr td:nth-child(4) {
+        color: #000000 !important;
+        font-weight: 500 !important;
+    }
+     
+        
+    
+
+    /* Empty State */
+    .empty-state {
+        text-align: center;
+        padding: 100px 40px;
+        color: var(--text-muted);
+    }
+
+    .empty-state i {
+        font-size: 80px;
+        margin-bottom: 25px;
+        color: #555;
+        opacity: 0.5;
+    }
+
+    .empty-state h4 {
+        color: var(--text-light);
+        font-weight: 700;
+        margin-bottom: 12px;
+        font-size: 22px;
+    }
+
+    .empty-state p {
+        font-size: 15px;
+        color: var(--text-muted);
+    }
+
+    /* Forms */
+    .form-group label {
+        font-weight: 700;
+        color: var(--text-light);
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 10px;
+        padding: 12px 15px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        color: var(--text-light);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: var(--text-muted);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+        box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.2);
+        background: rgba(102, 126, 234, 0.05);
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 80px;
+    }
+
+    /* Buttons */
+    .btn-sm {
+        padding: 8px 14px;
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 8px;
+        border: none;
+        transition: all 0.2s ease;
+    }
+
+    .btn-info {
+        background: var(--primary-gradient);
+        color: white;
+    }
+
+    .btn-info:hover {
+        color: white;
+        box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-success {
+        background: var(--success-gradient);
+        color: white;
+    }
+
+    .btn-success:hover {
+        color: white;
+        box-shadow: 0 5px 15px rgba(17, 153, 142, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: var(--text-light);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.15);
+        color: var(--text-light);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Modals */
+    .modal-content {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+        box-shadow: var(--shadow-xl);
+        overflow: hidden;
+        background: rgba(26, 26, 46, 0.95);
+        backdrop-filter: blur(12px);
+    }
+
+    .modal-header {
+        background: var(--primary-gradient);
+        border: none;
+        padding: 25px;
+    }
+
+    .modal-header.bg-info {
+        background: var(--primary-gradient) !important;
+    }
+
+    .modal-header.bg-success {
+        background: var(--success-gradient) !important;
+    }
+
+    .modal-header .modal-title {
+        font-weight: 800;
+        font-size: 20px;
+        color: white;
+    }
+
+    .modal-header .btn-close {
+        filter: invert(1) brightness(1.2);
+    }
+
+    .modal-body {
+        padding: 30px;
+        background: rgba(26, 26, 46, 0.95);
+        color: var(--text-light);
+    }
+
+    .modal-footer {
+        background: rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 18px 25px;
+    }
+
+    .modal-footer .btn {
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .penalty-header {
+            padding: 30px 20px;
+            margin-bottom: 25px;
+        }
+
+        .penalty-header h1 {
+            font-size: 26px;
+            margin-bottom: 12px;
+        }
+
+        .penalty-stat-card {
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .penalty-stat-card .stat-value {
+            font-size: 32px;
+        }
+
+        .table-responsive {
+            font-size: 13px;
+        }
+
+        .penalty-actions {
+            gap: 4px;
+        }
+
+        .penalty-actions .btn {
+            padding: 6px 10px;
+            font-size: 11px;
+        }
+
+        .empty-state {
+            padding: 60px 20px;
+        }
+
+        .empty-state i {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+    }
+
+    /* Animations */
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .penalty-stat-card {
+        animation: slideUp 0.4s ease-out;
+    }
+
+    .penalty-stat-card:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .penalty-stat-card:nth-child(3) {
+        animation-delay: 0.2s;
+    }
+
+    /* Search Section */
+    .search-section {
+        animation: slideUp 0.4s ease-out;
+    }
+
+    .search-group {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s ease;
+    }
+
+    .search-group:focus-within {
+        border-color: rgba(102, 126, 234, 0.4);
+        box-shadow: var(--shadow-lg), 0 0 0 4px rgba(102, 126, 234, 0.15);
+    }
+
+    .search-icon {
+        background: transparent;
+        border: none;
+        color: var(--text-muted);
+        font-size: 16px;
+        padding: 12px 16px;
+    }
+
+    .search-input {
+        background: transparent;
+        border: none;
+        color: var(--text-light);
+        font-size: 15px;
+        padding: 12px 0;
+    }
+
+    .search-input::placeholder {
+        color: var(--text-muted);
+    }
+
+    .search-input:focus {
+        box-shadow: none;
+        background: transparent;
+        outline: none;
+    }
+
+    .search-group .btn-secondary {
+        border: none;
+        background: transparent;
+        color: var(--text-muted);
+        padding: 12px 16px;
+        transition: all 0.2s ease;
+    }
+
+    .search-group .btn-secondary:hover {
+        color: var(--text-light);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Highlight matching rows */
+    .table tbody tr.hidden {
+        display: none;
+    }
+
+    .table tbody tr.no-match {
+        opacity: 0.5;
+    }
+
+    .table-highlight {
+        background: rgba(102, 126, 234, 0.15) !important;
+    }
+</style>
+
+<div class="container-fluid mt-4">
+    <!-- Header -->
+    <div class="penalty-header">
+        <div class="row align-items-center">
+            <div class="col-md-8">
+                <h1 class="mb-2"><i class="fas fa-gavel"></i> Penalties Management</h1>
+                <p class="mb-0">Manage library member penalties and dues</p>
+            </div>
+            <div class="col-md-4 text-end">
+                <a href="{{ url_for('admin_data_management') }}" class="btn btn-light">
+                    <i class="fas fa-arrow-left"></i> Back to Admin
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="penalty-stat-card">
+                <h5>Total Members with Penalties</h5>
+                <div class="stat-value">{{ stats.total_members_with_penalties }}</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="penalty-stat-card">
+                <h5>Total Penalties Amount</h5>
+                <div class="stat-value">₹{{ stats.total_penalties_amount }}</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="penalty-stat-card">
+                <h5>Average Penalty per Member</h5>
+                <div class="stat-value">₹{{ "%.0f"|format(stats.average_penalty) }}</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section mb-4">
+        <div class="input-group search-group">
+            <span class="input-group-text search-icon"><i class="fas fa-search"></i></span>
+            <input type="text" class="form-control search-input" id="penaltySearch" 
+                   placeholder="Search by Member ID, Name, Email, or Department..." 
+                   onkeyup="searchPenalties()">
+            <button class="btn btn-secondary" type="button" onclick="clearSearch()">
+                <i class="fas fa-times"></i> Clear
+            </button>
+        </div>
+    </div>
+
+    <!-- Penalties Table -->
+    <div class="table-wrapper">
+        {% if members %}
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Member ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>Penalty Amount</th>
+                        <th>Severity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for member in members %}
+                    <tr>
+                        <td><strong>{{ member.member_id }}</strong></td>
+                        <td>{{ member.name }}</td>
+                        <td>{{ member.email }}</td>
+                        <td>{{ member.department or 'N/A' }}</td>
+                        <td><strong>₹{{ member.penalties }}</strong></td>
+                        <td>
+                            {% if member.penalties >= 200 %}
+                                <span class="penalty-badge penalty-high">High</span>
+                            {% elif member.penalties >= 100 %}
+                                <span class="penalty-badge penalty-medium">Medium</span>
+                            {% else %}
+                                <span class="penalty-badge penalty-low">Low</span>
+                            {% endif %}
+                        </td>
+                        <td>
+                            <div class="penalty-actions">
+                                <button class="btn btn-sm btn-info" data-bs-toggle="modal" 
+                                        data-bs-target="#reducePenaltyModal" 
+                                        onclick="setMemberId('{{ member.member_id }}', '{{ member.name }}', 'reduce')">
+                                    <i class="fas fa-minus-circle"></i> Reduce
+                                </button>
+                                <button class="btn btn-sm btn-success" data-bs-toggle="modal" 
+                                        data-bs-target="#clearPenaltyModal"
+                                        onclick="confirmClearPenalty('{{ member.member_id }}', '{{ member.name }}')">
+                                    <i class="fas fa-check-circle"></i> Clear
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <i class="fas fa-certificate"></i>
+            <h4>No Penalties Found</h4>
+            <p>All members are in good standing with no outstanding penalties.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Reduce Penalty Modal -->
+<div class="modal fade" id="reducePenaltyModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">Reduce Penalty</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <form id="reducePenaltyForm" method="POST">
+                <div class="modal-body">
+                    <div class="form-group mb-3">
+                        <label>Member: <strong id="memberNameReduce"></strong></label>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="reduceAmount">Reduction Amount (₹)</label>
+                        <input type="number" class="form-control" id="reduceAmount" name="reduce_amount" 
+                               placeholder="Enter amount to reduce" required min="1">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="reduceReason">Reason (Optional)</label>
+                        <textarea class="form-control" id="reduceReason" name="reason" rows="3" 
+                                  placeholder="Enter reason for reduction"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-info">Reduce Penalty</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Clear Penalty Modal -->
+<div class="modal fade" id="clearPenaltyModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title">Clear Penalty</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p class="text-danger">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Are you sure you want to completely clear the penalty for <strong id="memberNameClear"></strong>?
+                </p>
+                <p class="text-muted">This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <form id="clearPenaltyForm" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-success">Yes, Clear Penalty</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function setMemberId(memberId, memberName, action) {
+        document.getElementById('memberNameReduce').textContent = memberName;
+        const form = document.getElementById('reducePenaltyForm');
+        form.action = `/reduce_penalty/${memberId}`;
+    }
+
+    function confirmClearPenalty(memberId, memberName) {
+        document.getElementById('memberNameClear').textContent = memberName;
+        const form = document.getElementById('clearPenaltyForm');
+        form.action = `/clear_penalty/${memberId}`;
+    }
+
+    // Search functionality
+    function searchPenalties() {
+        const searchInput = document.getElementById('penaltySearch').value.toLowerCase();
+        const tableBody = document.querySelector('.table tbody');
+        const rows = tableBody.querySelectorAll('tr');
+        let visibleCount = 0;
+
+        if (rows.length === 0) return;
+
+        rows.forEach(row => {
+            const memberId = row.querySelector('td:nth-child(1)').textContent.toLowerCase();
+            const memberName = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+            const memberEmail = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+            const department = row.querySelector('td:nth-child(4)').textContent.toLowerCase();
+
+            if (memberId.includes(searchInput) || memberName.includes(searchInput) || 
+                memberEmail.includes(searchInput) || department.includes(searchInput)) {
+                row.style.display = '';
+                visibleCount++;
+            } else {
+                row.style.display = 'none';
+            }
+        });
+
+        // Show/hide empty message
+        const emptyMsg = document.querySelector('.no-results');
+        if (visibleCount === 0 && searchInput.length > 0) {
+            if (!emptyMsg) {
+                const msg = document.createElement('tr');
+                msg.className = 'no-results';
+                msg.innerHTML = `<td colspan="7" style="text-align: center; padding: 40px; color: #a0a0a0;">
+                    <i class="fas fa-search" style="font-size: 32px; margin-bottom: 15px; display: block; opacity: 0.5;"></i>
+                    <strong>No members found matching your search</strong>
+                </td>`;
+                tableBody.appendChild(msg);
+            }
+        } else if (emptyMsg) {
+            emptyMsg.remove();
+        }
+    }
+
+    function clearSearch() {
+        document.getElementById('penaltySearch').value = '';
+        searchPenalties();
+    }
+
+    // Focus on search input on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('penaltySearch');
+        if (searchInput) {
+            searchInput.focus();
+        }
+    });
+</script>
+{% endblock %}

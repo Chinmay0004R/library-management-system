@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check In</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+    function togglePurpose() {
+        var type = document.getElementById('visitor_type').value;
+        document.getElementById('purpose_group').style.display = (type === 'visitor') ? 'block' : 'none';
+        document.getElementById('name_group').style.display = (type === 'student' || type === 'staff') ? 'none' : 'block';
+        // Hide member info if not student/staff
+        if (type !== 'student' && type !== 'staff') {
+            document.getElementById('member_info').innerHTML = '';
+        } else {
+            fetchMemberInfo();
+        }
+    }
+    function fetchMemberInfo() {
+        var type = document.getElementById('visitor_type').value;
+        var id = document.getElementById('visitor_id').value;
+        if ((type === 'student' || type === 'staff') && id) {
+            fetch(`/get_member_info/${id}`)
+                .then(response => response.ok ? response.json() : null)
+                .then(data => {
+                    if (data && data.name) {
+                        document.getElementById('member_info').innerHTML =
+                            `<div class='card p-2 mt-2 bg-light'>
+                                <b>Name:</b> ${data.name}<br>
+                                <b>Email:</b> ${data.email}<br>
+                                <b>Phone:</b> ${data.phone}<br>
+                                <b>Role:</b> ${data.role}<br>
+                                <b>Department:</b> ${data.department || ''}<br>
+                                <b>Year:</b> ${data.year || ''}
+                            </div>`;
+                    } else {
+                        document.getElementById('member_info').innerHTML = '<div class="text-danger">No student/staff found.</div>';
+                    }
+                });
+        } else {
+            document.getElementById('member_info').innerHTML = '';
+        }
+    }
+    </script>
+</head>
+<body onload="togglePurpose()">
+{% include 'navbar.html' %}
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-lg-8 col-xl-7">
+        <div class="card p-4 shadow-lg bg-white bg-opacity-90">
+                <h2 class="mb-4"><i class="fa-solid fa-user-check me-2 text-primary"></i>Check In</h2>
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="visitor_type" class="form-label">Visitor Type</label>
+                        <select class="form-select" id="visitor_type" name="visitor_type" onchange="togglePurpose()">
+                            <option value="student">Student</option>
+                            <option value="visitor">Visitor</option>
+                            <option value="staff">Staff</option>
+                        </select>
+                    </div>
+                    <div class="mb-3" id="name_group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="visitor_id" class="form-label">ID</label>
+                        <input type="text" class="form-control" id="visitor_id" name="visitor_id" required oninput="fetchMemberInfo()">
+                    </div>
+                    <div id="member_info"></div>
+                    <div class="mb-3" id="purpose_group" style="display:none;">
+                        <label for="purpose" class="form-label">Purpose</label>
+                        <input type="text" class="form-control" id="purpose" name="purpose">
+                    </div>
+                    <div class="d-flex flex-wrap gap-2 mt-3">
+                        <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-sign-in-alt me-1"></i>Check In</button>
+                        <a href="{{ url_for('attendance') }}" class="btn btn-secondary btn-lg"><i class="fa fa-arrow-left me-1"></i>Back to Attendance</a>
+                        <a href="{{ url_for('home') }}" class="btn btn-secondary btn-lg"><i class="fa fa-home me-1"></i>Home</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

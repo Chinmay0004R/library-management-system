@@ -1,0 +1,152 @@
+/* Books section specific styles */
+
+body.books-background {
+    background: url('/static/images/book_img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+body.books-background::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: none;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255,255,255,0.35); /* more transparent white */
+    border-radius: 18px;
+    box-shadow: 0 8px 40px rgba(60, 40, 20, 0.10);
+    padding: 36px 28px;
+    margin-top: 48px;
+    color: #2d2d2d;
+    border: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+h2, .books-title {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    color: #3a2c14;
+    font-size: 2.3rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 28px;
+    text-shadow: 0 2px 8px #fff, 0 1px 0 #bfa76a;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: rgba(255,255,255,0.35); /* more transparent white */
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(60, 40, 20, 0.10);
+    border: 1.5px solid rgba(60,40,20,0.18);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.table th, .table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(60,40,20,0.12);
+    font-size: 1.08rem;
+    color: #2d2d2d;
+    background: transparent;
+    text-shadow: 0 1px 4px #fff;
+}
+
+.table th {
+    background: transparent;
+    color: #3a2c14;
+    font-weight: bold;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    border-bottom: 2px solid #bfa76a;
+    text-shadow: 0 2px 8px #fff, 0 1px 0 #bfa76a;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.table tr:hover {
+    background: rgba(191, 167, 106, 0.10);
+}
+
+/* Classic button styles */
+.btn {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    background: rgba(191, 167, 106, 0.85);
+    color: #3a2c14;
+    border: 1.5px solid #bfa76a;
+    border-radius: 8px;
+    padding: 11px 24px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(80, 60, 20, 0.13);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+    background: rgba(191, 167, 106, 1);
+    color: #3a2c14;
+    box-shadow: 0 4px 16px rgba(80, 60, 20, 0.18);
+}
+
+.btn-danger {
+    background: rgba(169, 68, 66, 0.85);
+    color: #fffbe9;
+    border: 1.5px solid #bfa76a;
+    box-shadow: 0 2px 8px rgba(185, 74, 72, 0.13);
+}
+
+.btn-danger:hover {
+    background: rgba(122, 44, 40, 0.95);
+    color: #fffbe9;
+}
+
+.btn-secondary {
+    background: rgba(136, 136, 136, 0.65);
+    color: #3a2c14;
+    border: 1.5px solid #bfa76a;
+}
+
+.btn-secondary:hover {
+    background: rgba(191, 167, 106, 0.65);
+    color: #3a2c14;
+}
+
+.table-container {
+    margin-top: 36px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* Scrollbar styling for classic look */
+body.books-background ::-webkit-scrollbar {
+    width: 12px;
+    background: rgba(191, 167, 106, 0.25);
+}
+body.books-background ::-webkit-scrollbar-thumb {
+    background: rgba(166, 124, 82, 0.45);
+    border-radius: 6px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+    .container {
+        padding: 18px 6px;
+    }
+    .table th, .table td {
+        padding: 8px 6px;
+        font-size: 0.97rem;
+    }
+} 
