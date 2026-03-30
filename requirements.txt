@@ -37,3 +37,6 @@ typing_extensions==4.15.0
 
 # Production server
 gunicorn==21.2.0
+
+# PostgreSQL driver
+psycopg2-binary==2.9.9
