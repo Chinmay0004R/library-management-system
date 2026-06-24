@@ -54,16 +54,8 @@ Library Management System - A Web-Based Solution for Modern Libraries
 ## Project Report
 A comprehensive web-based library management system developed using Flask framework that automates and streamlines library operations.
 
-## Certificate
-[To be added by the institution]
 
-## Acknowledgment
-I would like to express my sincere gratitude to [Your Guide's Name] for their guidance and support throughout this project. I also thank [Institution Name] for providing the necessary resources and infrastructure.
 
-## Declaration
-I hereby declare that this project work titled "Library Management System" is my genuine work carried out under the guidance of [Guide's Name] at [Institution Name]. This work has not been submitted elsewhere for any degree or diploma.
-
-## Table of Contents
 
 ### 1. Introduction
 The Library Management System is a modern solution designed to automate library operations, making it easier for librarians to manage books, members, and transactions efficiently. This system replaces traditional paper-based methods with a digital solution.
@@ -163,8 +155,6 @@ Traditional library systems face challenges with:
 - Reliability
 - Maintainability
 
-### 8. Gantt Chart
-[Include your project timeline and milestones]
 
 ### 9. Existing System & Limitations
 Current manual systems face limitations such as:
@@ -286,12 +276,6 @@ The system is implemented using:
 - Bootstrap for responsive design
 - Flask-Mail for email notifications
 
-Key implementation files:
-- app.py: Main application file
-- models.py: Database models
-- routes.py: URL routing
-- templates/: HTML templates
-- static/: CSS, JS, and image files
 
 ### 17. Deployment
 Deployment steps:
@@ -310,4 +294,3 @@ The Library Management System successfully achieves its objectives of automating
 2. SQLAlchemy Documentation: https://www.sqlalchemy.org/
 3. Bootstrap Documentation: https://getbootstrap.com/
 4. Python Documentation: https://docs.python.org/
-5. [Add more references as needed]
